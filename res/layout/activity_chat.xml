@@ -1,0 +1,173 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    >
+
+    <!-- Üst Bölüm: Kişinin İsmi ve Durumu Gösteren Alan -->
+    <LinearLayout
+        android:id="@+id/upperSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#A855F7"
+        android:orientation="horizontal"
+        android:padding="8dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Profil Fotoğrafı en sola hizalandı -->
+        <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageReceiverProfile"
+        android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_marginEnd="16dp"
+    android:src="@drawable/ic_user_default"
+    android:contentDescription="Profile Image"
+            app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+
+    <LinearLayout
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <!-- Kişinin İsmi -->
+        <TextView
+            android:id="@+id/textCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kişinin İsmi"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Kişinin Durumu -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!-- Menü Iconu Sağ Üst Köşeye Sabitlenmiş -->
+<ImageView
+android:id="@+id/menuIcon"
+android:layout_width="37dp"
+android:layout_height="30dp"
+android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:contentDescription="Menü"
+    android:src="@drawable/menu_icon"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_gravity="end" />
+
+    <!-- Durum bilgisi yazısı -->
+<TextView
+android:id="@+id/textCaller"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Durum bilgisi burada görünecek"
+android:textSize="16sp"
+android:textColor="@android:color/black"
+android:layout_marginTop="8dp"
+android:visibility="gone"
+app:layout_constraintTop_toBottomOf="@id/upperSection"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Kabul Et Butonu -->
+<Button
+android:id="@+id/btnAccept"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Kabul Et"
+android:visibility="gone"
+app:layout_constraintTop_toBottomOf="@id/textCaller"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="4dp"/>
+
+    <!-- Progress Bar -->
+<ProgressBar
+android:id="@+id/progressCalling"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:visibility="gone"
+style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+app:layout_constraintTop_toBottomOf="@id/textCaller"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Reddet Butonu -->
+<Button
+android:id="@+id/btnReject"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Reddet"
+android:visibility="gone"
+app:layout_constraintTop_toBottomOf="@id/btnAccept"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="4dp"/>
+
+    <!-- RecyclerView - Mesajlar Görüntülenecek Alan -->
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recyclerViewMessages"
+android:layout_width="0dp"
+android:layout_height="0dp"
+    android:background="#FDF4FF"
+android:contentDescription="Mesaj listesi"
+app:layout_constraintTop_toBottomOf="@id/btnReject"
+app:layout_constraintBottom_toTopOf="@id/messageInputBar"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Mesaj Giriş Barı -->
+<LinearLayout
+android:id="@+id/messageInputBar"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:background="#A855F7"
+android:orientation="horizontal"
+android:padding="8dp"
+android:gravity="center_vertical"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent">
+
+<!-- EditText -->
+
+    <!-- Gönder Butonu -->
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:hint="Mesaj yaz..."
+        android:inputType="text"
+        android:background="@drawable/send_mess"
+        android:paddingHorizontal="12dp"
+        android:textSize="16sp" />
+
+    <ImageButton
+    android:id="@+id/buttonSend"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:src="@drawable/send_button"
+    android:background="@drawable/send_button_bg"
+    android:contentDescription="Mesaj gönder"
+    android:layout_marginStart="8dp" />
+</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

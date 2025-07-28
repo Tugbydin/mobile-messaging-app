@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FDF4FF">
+
+    <!-- KOD GÖNDER Butonu (Şeffaf) -->
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="304dp"
+        android:layout_height="177dp"
+        android:layout_alignBottom="@+id/phoneNumberField"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="84dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/getVerificationCodeButton"
+        android:layout_width="186dp"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/verikod"
+        android:hint="Doğrulama Kodu Gönder"
+        android:textColorHint="#FDF4FF" />
+
+    <!-- GİRİŞ YAP Butonu (Şeffaf) -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:background="@drawable/giris"
+        android:hint="Giriş Yap"
+        android:textColorHint="#FDF4FF" />
+
+    <!-- Telefon Numarası EditText (Şeffaf) -->
+    <EditText
+        android:id="@+id/phoneNumberField"
+        android:layout_width="257dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_bg"
+        android:hint="Telefon Numarası"
+        android:inputType="phone"
+        android:textColorHint="#2b282b" />
+
+    <!-- Doğrulama Kodu EditText (Şeffaf) -->
+    <EditText
+        android:id="@+id/verificationCodeField"
+        android:layout_width="252dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="385dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:background="@drawable/edit_bg"
+        android:hint="Doğrulama Kodu"
+        android:inputType="number"
+        android:textColorHint="#2b282b" />
+
+</RelativeLayout>

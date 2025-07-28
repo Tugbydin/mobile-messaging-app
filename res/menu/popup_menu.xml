@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_add_photo"
+        android:title="Profil Fotoğrafı Ekle"
+        android:icon="@drawable/add_pp"/>
+    <item
+        android:id="@+id/action_logout"
+        android:title="Çıkış Yap"
+        android:icon="@drawable/logout"/>
+    <item
+        android:id="@+id/action_delete_account"
+        android:title="Hesabı Sil"
+        android:icon="@drawable/delete_account"/>
+</menu>
