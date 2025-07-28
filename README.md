@@ -24,5 +24,3 @@ Bu proje, **Kotlin** ve **Firebase** kullanılarak geliştirilmiş modern bir mo
 - **Firebase Cloud Functions** – Gelişmiş sunucu tarafı işlemler
 - **WebRTC** – Gerçek zamanlı sesli ve görüntülü arama
 - **Figma** – UI/UX tasarımı
-
-
