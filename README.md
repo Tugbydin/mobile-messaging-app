@@ -1,7 +1,5 @@
 # 📱 Anlık Mesajlaşma Uygulaması | Instant Messaging App
 
-## 🇹🇷 Türkçe Açıklama
-
 Bu proje, **Kotlin** ve **Firebase** kullanılarak geliştirilmiş modern bir mobil **anlık mesajlaşma uygulamasıdır**. Kullanıcılar telefon numarasıyla doğrulama yaparak giriş yapabilir, rehberindeki kişilerle sohbet başlatabilir ve çeşitli iletişim özelliklerini kullanabilir.
 
 ### 🚀 Özellikler
